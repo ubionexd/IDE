@@ -1,0 +1,22 @@
+{
+  "name": "ide_nodejs",
+  "version": "1.0.0",
+  "description": "An IDE made for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubionexd/IDE.git"
+  },
+  "author": "ubionexd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ubionexd/IDE/issues"
+  },
+  "homepage": "https://github.com/ubionexd/IDE#readme",
+  "dependencies": {
+    "node": "^17.3.1"
+  }
+}
