@@ -37,29 +37,29 @@ export function activate(context: vscode.ExtensionContext) {
 
 			var selectedText = "";
 
-			const searchQuery = await vscode.window.showInputBox({
+			const userInput = await vscode.window.showInputBox({
 				placeHolder: "Type the name of the IDE here...",
 				prompt: "Search an IDE!",
 				value: selectedText
 			});
-			if (searchQuery === '') {
+			if (userInput === '') {
 				console.log("Invalid branch! User input is blank.");
 				vscode.window.showErrorMessage(`Invalid IDE! Input can't be blank.`);
-			} else if (searchQuery === 'master') {
+			} else if (userInput === 'master') {
 				console.log(`Invalid branch! Branch "master" can't be cloned.`);
 				vscode.window.showErrorMessage(`Invalid IDE! "master" is not an IDE!`);
-			} else if (searchQuery === 'vscode.ts') {
+			} else if (userInput === 'vscode.ts') {
 				console.log(`Invalid branch! Branch "vscode.ts" can't be cloned.`);
 				vscode.window.showErrorMessage(`Invalid IDE! "vscode.ts" is not an IDE!`);
-			} else if (searchQuery === 'vscode') {
+			} else if (userInput === 'vscode') {
 				console.log(`Invalid branch! Branch "vscode" can't be cloned.`);
 				vscode.window.showErrorMessage(`Invalid IDE! "vscode" is not an IDE!`);
-			} else if (searchQuery === 'pages') {
+			} else if (userInput === 'pages') {
 				console.log(`Invalid branch! Branch "pages" can't be cloned.`);
 				vscode.window.showErrorMessage(`Invalid IDE! "pages" is not an IDE!`);
 			} else {
-				const searchUrl = `https://github.com/ubionexd/IDE/tree/${searchQuery}`;
-				vscode.env.openExternal(vscode.Uri.parse(searchUrl));
+				const ideUrl = `https://github.com/ubionexd/IDE/tree/${userInput}`;
+				vscode.env.openExternal(vscode.Uri.parse(ideUrl));
 			}
 		})
 	);
